@@ -35,6 +35,7 @@ jobs:
           provider: microk8s
           channel: 1.25-strict/stable
           juju-channel: 3.0/candidate
+          microk8s-group: snap_microk8s
       - name: Run integration tests
         # set a predictable model name so it can be consumed by charm-logdump-action
         run: tox -e integration -- --model testing
